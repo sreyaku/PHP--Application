@@ -14,7 +14,7 @@ pipeline{
                 docker container stop php-app
             docker container rm php-app
             docker build -t php-app . 
-             docker run -d p 172.17.0.2 php-app 
+             docker run -d -p 80 php-app 
             '''
         }
         }
