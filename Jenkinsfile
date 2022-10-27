@@ -11,10 +11,10 @@ pipeline{
         stage('Dockerizing '){
             steps{
                 bat '''
-                docker container stop php-app
-            docker container rm php-app
-            docker build -t php-app . 
-             docker run -d -p 80 php-app 
+                docker container stop myapp
+            docker container rm myapp
+            docker image  build -t php-app . 
+            docker run -d -p 80:8083 --name myapp php-app
             
             '''
         }
