@@ -15,6 +15,7 @@ pipeline{
             docker container rm php-app
             docker build -t php-app . 
              docker run -d -p 80 php-app 
+             docker scan php-app
             '''
         }
         }
