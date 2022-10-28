@@ -14,7 +14,7 @@ pipeline{
                 docker container stop myapp
             docker container rm myapp
             docker image  build -t php-app . 
-            docker run -d -p 80:8083 --name myapp php-app
+            docker run -d -p 80:80 --name myapp php-app
             
             '''
         }
