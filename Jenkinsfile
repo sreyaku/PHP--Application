@@ -13,7 +13,7 @@ stages{
             stage('php_build') {
                 steps {
                     script{
-                        deployPHP-HTML()
+                        deployPHPHTML()
                 
                 }
             }
